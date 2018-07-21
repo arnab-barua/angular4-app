@@ -1,0 +1,25 @@
+<p>
+  {{newComponentText}}
+</p>
+<p>
+  new-cmp works!
+</p>
+<select>
+  <option *ngFor="let i of months" value={{i}}> {{i}}</option>
+</select>
+<br />
+ <span *ngIf="isAvailable"> This is the isAvailable test span</span>
+
+
+<!-- if else test begin -->
+<div>
+  <span *ngIf = "isAvailable; else conditionElse"> For true</span>
+  <ng-template #conditionElse> If false</ng-template>
+</div>
+<!-- if else test end -->
+
+<div>
+  <input type="text" [(ngModel)]="email" (keyup.enter) = "onKeyUp()" />
+</div>
+
+{{todayDateNewCmp}}
